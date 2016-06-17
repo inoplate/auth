@@ -1,0 +1,11 @@
+{
+    "name": "inoplate/user-management",
+    "autoload": {
+        "psr-4": {
+            "Inoplate\\UserManagement\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    }
+}

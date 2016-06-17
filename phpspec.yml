@@ -1,0 +1,4 @@
+suites:
+  library_suite:
+    namespace: Inoplate\UserManagement\Tests
+    psr4_prefix: Inoplate\UserManagement\Tests
