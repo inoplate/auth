@@ -1,13 +1,13 @@
 <?php
 
-namespace Inoplate\UserManagement\Providers;
+namespace Inoplate\Auth\Providers;
 
 use Gate;
-use Inoplate\UserManagement\Access\GateInterceptor;
+use Inoplate\Auth\Access\GateInterceptor;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 
-class UserManagementServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
     public function boot(GateContract $gate)
     {
@@ -22,10 +22,10 @@ class UserManagementServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('Inoplate\UserManagement\Contracts\Permission\Repository',
-            'Inoplate\UserManagement\Permission\InMemoryRepository');
+        $this->app->singleton('Inoplate\Auth\Contracts\Permission\Repository',
+            'Inoplate\Auth\Permission\InMemoryRepository');
 
-        $this->app->alias('Inoplate\UserManagement\Contracts\Permission\Repository', 'permission.store');
+        $this->app->alias('Inoplate\Auth\Contracts\Permission\Repository', 'permission.store');
     }
 
     /**

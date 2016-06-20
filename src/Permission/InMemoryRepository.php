@@ -1,14 +1,14 @@
 <?php
 
-namespace Inoplate\UserManagement\Permission;
+namespace Inoplate\Auth\Permission;
 
-use Inoplate\UserManagement\Permission as Model;
-use Inoplate\UserManagement\Contracts\Permission\Repository as Contract;
+use Inoplate\Auth\Permission as Model;
+use Inoplate\Auth\Contracts\Permission\Repository as Contract;
 
 class InMemoryRepository implements Contract
 {
     /**
-     * @var Inoplate\UserManagement\Contracts\Permission\Repository
+     * @var Inoplate\Auth\Contracts\Permission\Repository
      */
     protected $model;
 

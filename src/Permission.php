@@ -1,6 +1,6 @@
 <?php
 
-namespace Inoplate\UserManagement;
+namespace Inoplate\Auth;
 
 use Illuminate\Support\Collection;
 

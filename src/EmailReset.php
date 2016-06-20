@@ -1,6 +1,6 @@
 <?php
 
-namespace Inoplate\UserManagement;
+namespace Inoplate\Auth;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,6 +34,6 @@ class EmailReset extends Model
      */
     public function user()
     {
-        $this->belongsTo('Inoplate\UserManagement\User');
+        $this->belongsTo('Inoplate\Auth\User');
     }
 }

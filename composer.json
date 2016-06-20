@@ -2,7 +2,7 @@
     "name": "inoplate/user-management",
     "autoload": {
         "psr-4": {
-            "Inoplate\\UserManagement\\": "src/"
+            "Inoplate\\Auth\\": "src/"
         }
     },
     "require-dev": {

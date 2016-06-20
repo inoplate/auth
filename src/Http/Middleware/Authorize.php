@@ -1,6 +1,6 @@
 <?php
 
-namespace Inoplate\UserManagement\Http\Middleware;
+namespace Inoplate\Auth\Http\Middleware;
 
 use Closure;
 use Roseffendi\Authis\Authis;

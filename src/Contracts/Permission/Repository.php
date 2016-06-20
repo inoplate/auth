@@ -1,6 +1,6 @@
 <?php
 
-namespace Inoplate\UserManagement\Contracts\Permission;
+namespace Inoplate\Auth\Contracts\Permission;
 
 interface Repository
 {
