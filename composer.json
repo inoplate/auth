@@ -1,5 +1,5 @@
 {
-    "name": "inoplate/user-management",
+    "name": "inoplate/auth",
     "autoload": {
         "psr-4": {
             "Inoplate\\Auth\\": "src/"
