@@ -45,7 +45,7 @@ class Authorize
                 return response('Unauthorized.', 403);
             } else {
                 return back()->with([
-                                'error' => trans('inoplate-account::messages.auth.unauthorized',
+                                'error' => trans('inoplate-auth::messages.unauthorized',
                                     ['url' => $request->url() ])
                                 ]);
             }

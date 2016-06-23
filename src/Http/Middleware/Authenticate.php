@@ -2,6 +2,7 @@
 
 namespace Inoplate\Auth\Http\Middleware;
 
+use Closure;
 use Illuminate\Support\Facades\Auth;
 
 class Authenticate
@@ -21,7 +22,7 @@ class Authenticate
                 return response('Unauthorized.', 401);
             } else {
                 return redirect()->guest('login')
-                                 ->with('error', trans('inoplate-user-management::messages.auth.unauthenticated'));
+                                 ->with('error', trans('inoplate-auth::messages.unauthenticated'));
             }
         }
 

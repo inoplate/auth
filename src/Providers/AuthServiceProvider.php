@@ -12,6 +12,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(GateContract $gate)
     {
         $this->loadMigration();
+        $this->loadTranslation();
 
         $gate->before(function ($user, $ability, $model) {
             $interceptor = new GateInterceptor($this->app['permission.store']);
@@ -38,5 +39,15 @@ class AuthServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../database/migrations/' => database_path('migrations')
         ], 'migrations');
+    }
+
+    /**
+     * Load packages's translation
+     * 
+     * @return void
+     */
+    protected function loadTranslation()
+    {
+        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'inoplate-auth');
     }
 }
