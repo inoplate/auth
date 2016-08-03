@@ -11,7 +11,6 @@ class AuthServiceProvider extends ServiceProvider
 {
     public function boot(GateContract $gate)
     {
-        $this->loadMigration();
         $this->loadTranslation();
 
         $gate->before(function ($user, $ability, $model) {
@@ -27,18 +26,6 @@ class AuthServiceProvider extends ServiceProvider
             'Inoplate\Auth\Permission\InMemoryRepository');
 
         $this->app->alias('Inoplate\Auth\Contracts\Permission\Repository', 'permission.store');
-    }
-
-    /**
-     * Load packages migration
-     * 
-     * @return void
-     */
-    protected function loadMigration()
-    {
-        $this->publishes([
-            __DIR__.'/../../database/migrations/' => database_path('migrations')
-        ], 'migrations');
     }
 
     /**
