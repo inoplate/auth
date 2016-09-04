@@ -3,6 +3,8 @@
 namespace Inoplate\Auth\Http\Middleware;
 
 use Closure;
+use Event;
+use Inoplate\Auth\Events\UserAuthenticated;
 use Illuminate\Support\Facades\Auth;
 
 class Authenticate
@@ -25,6 +27,8 @@ class Authenticate
                                  ->with('error', trans('inoplate-auth::messages.unauthenticated'));
             }
         }
+
+        Event::fire(new UserAuthenticated($request->user()));
 
         return $next($request);
     }
